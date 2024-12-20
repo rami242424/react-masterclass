@@ -10,10 +10,7 @@ const Box = styled.div`
   width: 100px;
 `;
 
-const Circle = styled.div`
-  background-color: ${(props) => props.bgColor};
-  height: 100px;
-  width: 100px;
+const Circle = styled(Box)`
   border-radius: 50px;
 `;
 function App() {
