@@ -4,18 +4,17 @@ const Father = styled.div`
   display: flex;
 `;
 
-const Btn = styled.button`
-  color : white;
-  background-color: yellowgreen;
-  border : 0;
-  border-radius: 15px;
+const Input = styled.input.attrs({ required : true, minlength: 10 })`
+  background-color: burlywood;
 `;
-
 function App() {
   return (
     <Father>
-      <Btn>Log in</Btn>
-      <Btn as="a" href="/" >Log out</Btn>
+      <Input />
+      <Input />
+      <Input />
+      <Input />
+      <Input />
     </Father>
   );
 }
