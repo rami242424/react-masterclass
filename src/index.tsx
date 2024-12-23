@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import App from './App';
 
 // 'root' 엘리먼트를 가져옴
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 
 const darkTheme = {
   textColor : "whitesmoke",
