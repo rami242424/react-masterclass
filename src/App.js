@@ -38,18 +38,16 @@ const Box = styled.div`
   
   animation: ${rotationAnimation} 1s linear infinite;
 
-  ${Emoji} {
-    &:hover {
+  ${Emoji}:hover {
       font-size : 98px;
     }
-  }
 `;
 
 function App() {
   return (
     <Wrapper>
       <Box>
-        <Emoji as ="div">😘</Emoji>
+        <Emoji as ="p">😘</Emoji>
       </Box>
       <Emoji>😘😘</Emoji>
     </Wrapper>
