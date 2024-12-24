@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface ContainerProps {
     bgColor : string;
+    borderColor : string;
 }
 
 const Container = styled.div<ContainerProps>`
@@ -9,24 +10,17 @@ const Container = styled.div<ContainerProps>`
     height: 200px;
     background-color: ${(props) => props.bgColor};
     border-radius: 100px;
+    border: 1px solid ${(props) => props.borderColor};
 `;
 
 interface CircleProps {
     bgColor : string;
+    borderColor ?: string;
 }
 
-function Circle({ bgColor } : CircleProps){
-    return <Container bgColor={bgColor} />
+function Circle({ bgColor, borderColor } : CircleProps){
+    return <Container bgColor={bgColor} borderColor={borderColor ?? bgColor}/>
 }
 
 export default Circle;
 
-interface PlayerShape {
-    name : string;
-    age : number;
-}
-
-const sayHello = (playerObj : PlayerShape) => `Hello ${playerObj.name} you are ${playerObj.age} years old.`;
-
-sayHello({name: "nico", age: 90});
-sayHello({name: "lynn", age: 20 })
