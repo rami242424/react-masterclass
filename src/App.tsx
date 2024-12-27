@@ -1,6 +1,5 @@
-import Router from './Router';
-
-function App(){
+import Router from "./Router";
+function App() {
   return <Router />;
 }
 
